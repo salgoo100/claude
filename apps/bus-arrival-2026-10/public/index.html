@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>버스 도착 알리미</title>
+  <meta name="theme-color" content="#1f6feb">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>🚌 버스 도착 알리미</h1>
+      <p class="sub">정류장 번호와 버스 번호로 도착 예정 시간을 확인하세요</p>
+    </header>
+
+    <form id="search" autocomplete="off">
+      <label>지역
+        <select id="region" required></select>
+      </label>
+      <label>정류장 번호
+        <input id="stop" inputmode="numeric" pattern="\d{4,6}" maxlength="6" placeholder="예: 01234" required>
+      </label>
+      <label>버스 번호
+        <input id="bus" placeholder="비우면 전체">
+      </label>
+      <div class="actions">
+        <button type="submit" class="primary">조회</button>
+        <button type="button" id="fav" title="즐겨찾기에 추가">☆ 즐겨찾기</button>
+      </div>
+    </form>
+
+    <section id="favorites" hidden>
+      <h2>즐겨찾기</h2>
+      <ul id="fav-list"></ul>
+    </section>
+
+    <section id="result" aria-live="polite"></section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

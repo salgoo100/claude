@@ -1,0 +1,13 @@
+{
+  "name": "bus-arrival",
+  "version": "1.0.0",
+  "description": "정류장 번호 + 버스 번호로 실시간 도착 예정 시간을 보여주는 웹앱",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "mock": "MOCK=1 node server.js",
+    "test": "node --test test/*.test.js"
+  }
+}

@@ -7,6 +7,8 @@ Claude와 함께 만든 산출물 모음 — 테스트 시나리오, 디자인 �
 ```
 .
 ├── README.md                       # 이 파일
+├── apps/                           # 작은 웹앱
+│   └── bus-arrival-2026-10/        # 정류장·버스 번호로 도착 예정 시간 조회
 ├── test-scenarios/                 # 테스트 시나리오 모음
 │   └── kms-2026-07/                # 2026년 7월 Key Management Service
 │       ├── README.md
@@ -25,6 +27,12 @@ Claude와 함께 만든 산출물 모음 — 테스트 시나리오, 디자인 �
 | 폴더 | 내용 |
 | --- | --- |
 | [`test-scenarios/kms-2026-07`](./test-scenarios/kms-2026-07) | Key Management Service 2026년 7월 릴리즈 (Customer/Platform Managed Key, Service Home, 접근 제어, 서비스 해지) — 기능 + UI/UX 검증 |
+
+### Apps
+
+| 폴더 | 내용 |
+| --- | --- |
+| [`apps/bus-arrival-2026-10`](./apps/bus-arrival-2026-10) | 🚌 버스 도착 알리미 — 정류장 번호 + 버스 번호로 실시간 도착 예정 시간 (서울/경기) |
 
 ## 🛠️ 스크립트
 

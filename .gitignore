@@ -16,3 +16,6 @@ package-lock.json
 .vscode/
 .idea/
 *.swp
+
+# Secrets
+.env
