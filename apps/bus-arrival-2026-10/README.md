@@ -38,9 +38,21 @@ npm run mock
 
 휴대폰에서 쓰려면 같은 Wi‑Fi에서 `http://<PC의 IP>:3000` 으로 접속하거나, Render/Railway/Fly.io 같은 Node 호스팅에 올리고 환경변수에 키를 넣으면 됩니다.
 
+## 3. Vercel 배포
+
+1. [vercel.com](https://vercel.com) → **Add New… → Project** → GitHub 저장소 `salgoo100/claude` 선택
+2. **Root Directory** 를 `apps/bus-arrival-2026-10` 으로 지정 (Framework Preset: Other)
+3. **Environment Variables** 에 `SEOUL_SERVICE_KEY`, `GYEONGGI_SERVICE_KEY` 입력
+   (키 없이 화면만 보려면 `MOCK` = `1`)
+4. **Deploy** → `https://<프로젝트>.vercel.app` 주소로 휴대폰에서 바로 사용
+
+`public/` 은 정적 파일로, `api/*.js` 는 서버리스 함수로 배포됩니다. 환경변수를 바꾸면 **Redeploy** 해야 적용됩니다.
+
 ## 구조
 
 ```
+api/               # Vercel 서버리스 함수 (server.js 핸들러 재사용)
+vercel.json        # Vercel 설정 (public/ 을 정적 출력으로)
 server.js          # 정적 파일 + /api 프록시 (인증키를 브라우저에 노출하지 않고 CORS 회피), 15초 캐시
 lib/providers.js   # 서울/경기 API 호출 및 응답 정규화, MOCK 데이터
 public/            # 화면 (HTML/CSS/JS, 빌드 불필요)
