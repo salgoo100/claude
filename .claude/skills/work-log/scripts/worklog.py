@@ -119,7 +119,7 @@ li{{display:flex;gap:16px;padding:8px 0;border-top:1px solid var(--line)}}li:fir
 
 
 def ics_text(s):
-    return s.replace("\\", "\\\\").replace(";", "\;").replace(",", "\\,").replace("\n", "\\n")
+    return s.replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
 
 
 def cmd_ics(a):
